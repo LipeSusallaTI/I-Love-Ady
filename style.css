@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Assets/fonte/Quicksand-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Luna';
+    src: url('Assets/fonte/Luna.ttf');
+}
+
+body {
+    font-family: 'Quicksand';
+    background-image: url('https://img.freepik.com/free-photo/surface-white-planks_23-2147625787.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease;
+    overflow-x: hidden;
+}
+
+.Start {
+    animation: fadeIn 2s ease;
+    text-shadow: #d1497f 0 2px 8px;
+}
+
+.Start h1 {
+    font-family: 'Luna';
+    text-align: center;
+}
+.Start h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+
+}
+
+.Start p,
+.Senha {
+    text-align: center;
+}
+
+.Start p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.dicas {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d1497f;
+    text-align: center;
+}
+.dicas:hover {
+    text-shadow: #d1497f 0 2px 8px;
+    transition: text-shadow 0.4s ease;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin: 40px auto 0 auto;
+    background: linear-gradient(135deg, #fff 80%, #ffe3ef 100%);
+    border: 2px solid #d1497f;
+    box-shadow: 0 8px 24px rgba(209, 73, 127, 0.13), 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.7s cubic-bezier(.68, -0.55, .27, 1.55);
+    border-radius: 24px;
+    margin-top: -5px;
+}
+
+.envelope:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 16px 48px rgba(209, 73, 127, 0.18);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    background: #d1497f;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope.open .flap {
+    transform: rotateX(-180deg);
+}
+
+.senha-container {
+    margin-top: 20px;
+}
+
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #d1497f;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    color: #d1497f;
+}
+
+input[type="password"]:focus {
+    border-color: #d1497f;
+    box-shadow: #d1497f 0px 0px 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #d1497f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: #d1497f 0px 0px 10px;
+    transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.conteudo {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.envelope.aberto+.conteudo {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.musica {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+}
+/* Estilos para dispositivos móveis (smartphones) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .Start h1 {
+        font-size: 24px;
+    }
+
+    .envelope {
+        width: 250px;
+        height: 150px;
+        margin-top: 20px;
+    }
+
+    .flap {
+        width: 250px;
+        height: 90px;
+    }
+
+    input[type="password"] {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .dicas p {
+        font-size: 14px;
+    }
+
+    .musica {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        padding: 10px;
+    }
+}
+
+/* Estilos para tablets pequenos */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .Start h1 {
+        font-size: 30px;
+    }
+
+    .envelope {
+        width: 280px;
+        height: 170px;
+    }
+
+    .flap {
+        width: 280px;
+        height: 100px;
+    }
+
+    input[type="password"] {
+        width: 70%;
+    }
+}
+
+/* Estilos para tablets maiores e pequenos notebooks */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Start h1 {
+        font-size: 36px;
+    }
+
+    .envelope {
+        width: 320px;
+        height: 190px;
+    }
+
+    .flap {
+        width: 320px;
+        height: 110px;
+    }
+
+    input[type="password"] {
+        width: 60%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário Minha Princesa!🤍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="musica" loop style="display: none;" controls volume="0.2">
+        <source src="./Assets/video/ssstik.io_1754278642681.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('musica');
+            audio.volume = 0.030;
+        });
+    </script>
+    
+
+
+    <div class="Start">
+        <h1>Feliz Aniversário Minha Princesa!🤍</h1>
+    </div>
+  
+
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+    </div>
+    
+    <div class="dicas">
+        <p>Dica para adivinhar a senha:</p>
+        <p>1. Quando tudo começou!</p>
+        <p id="999">2. A data tem que estar no formato 00/00/0000.</p>
+    </div>
+
+    <div class="senha-container">
+        <input type="password" id="senha" placeholder="Digite a senha..." />
+        <button onclick="verificarSenha()">Abrir 💌</button>
+    </div>
+    <div class="Start">
+        <p>Hoje é um dia especial, e eu quero que você saiba o quanto você é amada.</p>
+        <p>Dentro deste envelope, há uma surpresa especial para você... (e eu espero que você goste!)</p>
+    </div>
+    <div class="musica">
+        <button onclick="document.getElementById('musica').play()">Tocar música</button>
+        <button onclick="document.getElementById('musica').pause()">Parar música</button>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
