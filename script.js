@@ -6,7 +6,7 @@ function verificarSenha() {
     document.getElementById("envelope").classList.add("open");
     setTimeout(() => {
       window.location.href = "outra-pagina.html";
-    }, 1500);
+    }, 700);
   } else {
     document.querySelector("P").innerText = "Senha incorreta! Tenta de novo 😉";
   }

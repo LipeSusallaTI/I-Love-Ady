@@ -13,7 +13,6 @@ body {
     background-image: url('https://img.freepik.com/free-photo/surface-white-planks_23-2147625787.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: black;
     margin: 0;
     padding: 0;
@@ -192,8 +191,9 @@ button:hover {
 
     button {
         padding: 8px 16px;
-        font-size: 14px;
-    }
+        font-size: 24px;
+        
+        }
 
     .dicas p {
         font-size: 14px;
@@ -230,6 +230,7 @@ button:hover {
 
 /* Estilos para tablets maiores e pequenos notebooks */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
     .Start h1 {
         font-size: 36px;
     }
