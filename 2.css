@@ -228,7 +228,7 @@ body {
     }
 
     .carrossel {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
@@ -281,4 +281,5 @@ body {
         width: 400px;
         height: 400px;
     }
+
 }
