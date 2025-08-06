@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Assets/fonte/Quicksand-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Luna';
+    src: url('Assets/fonte/Luna.ttf');
+}
+
+body {
+    font-family: 'Quicksand';
+    background-image: url('https://img.freepik.com/free-photo/surface-white-planks_23-2147625787.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease;
+    overflow-x: hidden;
+}
+
+.Start {
+    animation: fadeIn 2s ease;
+    text-shadow: #d1497f 0 2px 8px;
+}
+
+.Start h1 {
+    font-family: 'Luna';
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Start h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+
+}
+
+.dicas {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d1497f;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dicas:hover {
+    text-shadow: #d1497f 0 2px 8px;
+    transition: text-shadow 0.4s ease;
+}
+
+.pergaminho {
+    background: #fff8dc;
+    border: 5px solid #c2a85d;
+    padding: 20px;
+    width: 500px;
+    max-height: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: max-height 2s ease;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pergaminho:hover {
+    max-height: 130px;
+    transition: max-height 0.5s ease;
+}
+
+.pergaminho.aberto {
+    max-height: 3000px;
+    /* ajuste conforme o tamanho do seu texto */
+}
+
+.pergaminho::before,
+.pergaminho::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: #c2a85d;
+    left: 0;
+}
+
+.pergaminho::before {
+    top: -25px;
+    border-radius: 10px 10px 0 0;
+}
+
+.pergaminho::after {
+    bottom: -25px;
+    border-radius: 0 0 10px 10px;
+}
+
+#conteudoPergaminho h1 {
+    margin-top: -10px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+    text-shadow: #d1497f 0 2px 8px;
+
+}
+
+#conteudoPergaminho h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.carrossel {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.imagens {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.imagens img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.botoes {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.botoes button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botoes button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carrossel:hover .botoes {
+    opacity: 1;
+}
+
+.carrossel:hover {
+    box-shadow: 0 0 40px #d1497f;
+    transition: box-shadow 0.4s ease-in-out;
+    transform: scale(1.03) rotate(-1deg);
+}
+
+.button a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #d1497f;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #d1497f;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button a:hover {
+    text-decoration: none;
+    color: #d1497f;
+    text-shadow: #d1497f 0 2px 8px;
+    box-shadow: #d1497f 0px 0px 10px;
+}
+
+/* Telas muito pequenas: até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    .pergaminho {
+        width: 90%;
+        max-height: 60px;
+        padding: 10px;
+    }
+
+    .pergaminho.aberto {
+        max-height: 3000px;
+    }
+
+    .carrossel {
+        width: 90%;
+        height: auto;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: auto;
+    }
+
+    .botoes button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .button a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+
+/* Celulares e tablets pequenos: 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .pergaminho {
+        width: 90%;
+    }
+
+    .carrossel {
+        width: 90%;
+        height: auto;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: auto;
+    }
+
+    .botoes button {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .button a {
+        display: inline-block;
+        margin: 5px;
+        width: auto;
+    }
+}
+
+/* Tablets e laptops: 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pergaminho {
+        width: 80%;
+    }
+
+    .carrossel {
+        width: 80%;
+        height: 350px;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* Telas grandes (desktops): 1025px pra cima */
+@media (min-width: 1025px) {
+    .pergaminho {
+        width: 500px;
+    }
+
+    .carrossel {
+        width: 400px;
+        height: 400px;
+    }
+
+    .imagens img {
+        width: 400px;
+        height: 400px;
+    }
+}

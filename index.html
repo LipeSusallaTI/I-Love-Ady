@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="https://pngimg.com/d/hello_kitty_PNG22.png">
     <link rel="stylesheet" href="style.css">
 </head>
-
+<div id="coracoes-container"></div>
 <body>
     <audio id="musica" loop style="display: none;" controls volume="0.2">
         <source src="Assets/video/TikVid.io_7501528354374323498.mp3" type="audio/mpeg">
@@ -17,7 +17,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var audio = document.getElementById('musica');
-            audio.volume = 0.030;
+            audio.volume = 0.30;
         });
     </script>
     
@@ -47,8 +47,8 @@
         <p>Dentro deste envelope, há uma surpresa especial para você... (e eu espero que você goste!)</p>
     </div>
     <div class="musica">
-        <button onclick="document.getElementById('musica').play()">Tocar música</button>
-        <button onclick="document.getElementById('musica').pause()">Parar música</button>
+        <button onclick="document.getElementById('musica').play()" id="aa">Tocar música</button>
+        <button onclick="document.getElementById('musica').pause()" id="ab">Parar música</button>
     </div>
 </body>
 <script src="script.js"></script>
